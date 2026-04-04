@@ -7,10 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <?php
-    include 'includes/head.php';
-    ?>
+    @include('layouts.includes.head')
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -18,9 +15,7 @@
 
 <body class="font-sans text-gray-600 antialiased">
 
-    <?php
-    include 'includes/header.php';
-    ?>
+    @include('layouts.includes.header')
 
 
     <!-- Main Content Start -->
@@ -29,13 +24,9 @@
 
     <!-- Main Content End -->
 
-    <?php
-    include 'includes/footer.php';
-    ?>
+    @include('layouts.includes.footer')
 
-    <?php
-    include 'includes/script.php';
-    ?>
+    @include('layouts.includes.script')
 
 </body>
 {{-- <body class="font-sans antialiased">

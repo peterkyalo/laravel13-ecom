@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center">
             <div class="w-1/4">
                 <a href="index.php">
-                    <img src="assets/images/logo.png" alt="Logo" class="max-w-[200px]" />
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" class="max-w-[200px]" />
                 </a>
             </div>
 
@@ -68,7 +68,7 @@
             </button>
 
             <a href="index.php">
-                <img src="assets/images/logo.png" alt="Logo" class="max-w-[120px]" />
+                <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" class="max-w-[120px]" />
             </a>
 
             <div class="flex items-center space-x-5">

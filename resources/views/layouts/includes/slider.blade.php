@@ -12,7 +12,8 @@
                             Now</a>
                     </div>
                     <div class="hidden lg:block">
-                        <img src="assets/images/slider/slider-item-1.png" alt="Furniture" class="mx-auto" />
+                        <img src="{{ asset('assets/images/slider/slider-item-1.png') }}" alt="Furniture"
+                            class="mx-auto" />
                     </div>
                 </div>
             </div>
@@ -27,7 +28,8 @@
                             Now</a>
                     </div>
                     <div class="hidden lg:block">
-                        <img src="assets/images/slider/slider-item-2.png" alt="Furniture" class="mx-auto" />
+                        <img src="{{ asset('assets/images/slider/slider-item-2.png') }}" alt="Furniture"
+                            class="mx-auto" />
                     </div>
                 </div>
             </div>
