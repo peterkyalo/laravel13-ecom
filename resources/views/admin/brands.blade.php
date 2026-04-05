@@ -57,8 +57,9 @@
                                 <td class="px-6 py-4">
                                     <div
                                         class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center border">
-                                        <img src="uploads/brands/1.png" class="max-w-[30px] max-h-[30px] object-contain"
-                                            alt="Brand Logo" onerror="this.src='https://placehold.co/40x40?text=B'">
+                                        <img src="{{ asset('uploads/brands/' . $brand->image) }}"
+                                            class="max-w-[30px] max-h-[30px] object-contain" alt="{{ $brand->name }}"
+                                            onerror="this.src='https://placehold.co/40x40?text=B'">
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
@@ -116,16 +117,7 @@
 
             <div
                 class="px-6 py-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <span class="text-sm text-gray-500">Showing <span class="font-bold text-gray-700">1-4</span> of <span
-                        class="font-bold text-gray-700">24</span> brands</span>
-
-                <div class="flex gap-2">
-                    <button class="px-3 py-1 border rounded hover:bg-gray-50 text-gray-600 disabled:opacity-50 text-sm"
-                        disabled>Previous</button>
-                    <button class="px-3 py-1 border rounded bg-primary text-white text-sm">1</button>
-                    <button class="px-3 py-1 border rounded hover:bg-gray-50 text-gray-600 text-sm">2</button>
-                    <button class="px-3 py-1 border rounded hover:bg-gray-50 text-gray-600 text-sm">Next</button>
-                </div>
+                {{ $brands->links() }}
             </div>
         </div>
 

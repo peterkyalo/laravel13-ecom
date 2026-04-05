@@ -14,7 +14,7 @@ class AdminController extends Controller
     public function brands()
     {
         // Fetch all brands from the database, ordered by ID in descending order
-        $brands = Brand::orderBy('id', 'desc')->get();
+        $brands = Brand::orderBy('id', 'desc')->paginate(10); // Paginate results, 10 per page
         return view('admin.brands', compact('brands'));
     }
 
