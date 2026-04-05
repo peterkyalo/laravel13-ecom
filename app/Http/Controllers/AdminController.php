@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Brand;
 
 class AdminController extends Controller
 {
@@ -10,4 +10,12 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
+    
+    public function brands()
+    {
+        // Fetch all brands from the database, ordered by ID in descending order
+        $brands = Brand::orderBy('id', 'desc')->get();
+        return view('admin.brands', compact('brands'));
+    }
+
 }
