@@ -27,7 +27,8 @@
                             <h4 class="text-xl font-bold mb-4">Dashboard</h4>
                             <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
                                 <p>Hello, <strong>{{ Auth::user()->name }}</strong> (If Not
-                                    <strong>{{ Auth::user()->name }} !</strong> <a href="{{ route('login') }}"
+                                    <strong>{{ Auth::user()->name }} !</strong> <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                         class="text-primary hover:underline">Logout</a>)
                                 </p>
                             </div>
