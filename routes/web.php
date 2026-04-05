@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware([AuthAdmin::class])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/admin/brands', [AdminController::class, 'brands'])->name('admin.brands');
+    Route::get('/admin/brands/create', [AdminController::class, 'addBrand'])->name('admin.brands.add');
 });
 
 // User Routes
